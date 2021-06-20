@@ -1,0 +1,66 @@
+.pointer{
+    cursor: pointer;
+}
+
+.vinculo:hover{
+    text-decoration: none;
+}
+
+.line{
+  height: 3px;
+  border-radius: 18px;
+  margin-left: 0%;
+}
+
+.font-mono{
+  font-family: monospace;
+}
+
+.login-containter{
+  background-image: url(../img/login.jpg);
+  background-size: cover;
+  min-height: 500px;
+}
+
+.container-dashboard{
+  margin: 0% 7%;
+}
+
+.input{
+  background: rgba(255, 255, 255, 0.131);
+  padding: 20px;
+}
+
+.input:focus{
+  background: rgba(255, 255, 255, 0.131);
+  border-color:rgba(255, 255, 255, 0.131) ;
+  color: white;
+}
+
+.register-img{
+  background-image: url(../img/register.jpg);
+  background-size: cover;
+}
+
+.bg-blue{
+  background: #29348E;
+  min-height: 600px;
+}
+
+.animacion{
+  animation: 1s opacidad;
+  background: #26C0FE;
+}
+
+.opacidad:hover{
+  animation: 1s opacidad;
+}
+
+@keyframes opacidad {
+  100%{
+    opacity: 1;
+  }
+  0%{
+    opacity: 0;
+  }
+}
