@@ -1,6 +1,6 @@
 # Description
 
-Aplicación web desarrollada con react y firebase para la organización de productos por bodegas
+Kiqui es una aplicación web desarrollada con react y firebase para la organización de productos por bodegas
 
 # Getting Started with Kiqui
 
@@ -75,9 +75,9 @@ componente en caso tal de que no se pasen los props correctos.
 Para todas las interfaces de la aplicación se manejo bootstrap, pero se editó algunas partes del código original de bootstrap 
 para hacerlo más completo a la idea del proyecto, tambien se agregarón algunas clases extras en el archivo de index.css que se usan 
 en la mayoria de componentes de la aplicación. Se manejaron iconos que tambien dependen de bootstrap aunque las imagenes son sacadas de 
-[https://www.pexels.com/](https://www.pexels.com/https://www.pexels.com/)  con licencia de uso libre.
+[https://www.pexels.com/](https://www.pexels.com)  con licencia de uso libre.
 
 ## Deploy y Demo
 
 Se hizo un deploy a heroku plataforma para en donde se subió la aplicacion en la nube además de agregar el código a git hub, la aplicación desplego sin errores y se puede ver su demo en el siguiente enlace.
-[https://boiling-sierra-67699.herokuapp.com/](https://boiling-sierra-67699.herokuapp.com/https://boiling-sierra-67699.herokuapp.com/)
+[https://boiling-sierra-67699.herokuapp.com/](https://boiling-sierra-67699.herokuapp.com)
