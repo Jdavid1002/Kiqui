@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web desarrollada con react y firebase para la organización de productos por bodegas
+
+# Getting Started with Kiqui
+
+Este proyecto esta desarrollado con React.js por lo cual son validos los siguientes comandos para inicializar el proyecto de manera local
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Ejecuta la aplicación en el modo de desarrollo..\
+Abre [http://localhost:3000](http://localhost:3000) para verlo en el navegador.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La página se recargará si realiza modificaciones. \
+También verá errores de pelusa en la consola.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Construye la aplicación para producción en la carpeta `build`. \
+Agrupa correctamente React en el modo de producción y optimiza la compilación para obtener el mejor rendimiento.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La compilación se minimiza y los nombres de archivo incluyen los hash. \
+¡Tu aplicación está lista para implementarse!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Consulte la sección sobre [implementación] (https://facebook.github.io/create-react-app/docs/deployment) para obtener más información.
 
-### `npm run eject`
+## Dependecias
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Firebase
+### `npm install firebase`
+SweetAlert 2
+### `npm install sweetalert2`
+React Router DOM
+### `npm install react-router-dom`
+Reactfire
+### `npm i reactfire`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Servidor y Base de Datos 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Se agregó una base de datos basada en la nube la cual busca trabajar en tiempo real. Se eligió esta base de datos puesto 
+a que es bastante rápida y no necesita de un hosting para ser almacenada o utilizada al momento del deploy además 
+De facilitar los procesos de consultas, almacenamiento y ediciones de la información de la base de datos.
 
-## Learn More
+En el archivo Firebase.js se agregó la configuración de la key o contraseña dada por firebase para su uso libre en la aplicación 
+además de exportar a su vez "firestore" la cual es una base de datos sencilla de utilizar y de uso gratuito , la cual se usará 
+en todo el proyecto buscando hacer más rápidas las consultas y acortar código innecesario al momento de realizar las mismas.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Autenticación y Manejo de Consultas en la base de datos 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Se manejarón funciones ya creadas por firebase para autenticar y validar usuarios con contraseña y correo electronico, además de 
+esto, se agregaron campos en firestore que se almacenan al momento de registrar un usuario y se "relaciona" con un id de usuario 
+en las autenticaciones.
 
-### Code Splitting
+Las consultas a la base de datos así como eliminar, editar y almacenar datos se hizo con funciones ya creadas por firebase 
+Utilizando async/await para obtener los datos que estas funciones retornaban, se validaron todas las consultas en caso tal 
+de que fueran correctas o tuvieran algún tipo de fallo o error. Tambien se valido que las consultas llegarán con datos y no vacías.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Sesiones de Usuario 
 
-### Analyzing the Bundle Size
+Se manejo funciones de autenticación de firebase para obtener las sesiones de los usuarios al momento de renderear los componentes 
+esto hace que se tome una decisión al momento de renderear, en caso tal de que tenga sesión se cargarán unos componentes como estos 
+mismos no se rendearán en caso tal de que no se tenga sesión.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Props para las consultas 
 
-### Making a Progressive Web App
+Se utilizaron props para la mayoria de consultas a la hora de agregar, eliminar o editar datos, por lo mismo cada uno de los props 
+que se manejan en los componentes funcionales son obligatorios o son extremadamente necesarios, por lo mismo no funcionará el 
+componente en caso tal de que no se pasen los props correctos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Interfaces y Bootstrap 
 
-### Advanced Configuration
+Para todas las interfaces de la aplicación se manejo bootstrap, pero se editó algunas partes del código original de bootstrap 
+para hacerlo más completo a la idea del proyecto, tambien se agregarón algunas clases extras en el archivo de index.css que se usan 
+en la mayoria de componentes de la aplicación. Se manejaron iconos que tambien dependen de bootstrap aunque las imagenes son sacadas de 
+[https://www.pexels.com/](https://www.pexels.com/https://www.pexels.com/)  con licencia de uso libre.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Deploy y Demo
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Se hizo un deploy a heroku plataforma para en donde se subió la aplicacion en la nube además de agregar el código a git hub, la aplicación desplego sin errores y se puede ver su demo en el siguiente enlace.
+[https://boiling-sierra-67699.herokuapp.com/](https://boiling-sierra-67699.herokuapp.com/https://boiling-sierra-67699.herokuapp.com/)
